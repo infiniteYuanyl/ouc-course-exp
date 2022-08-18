@@ -16,7 +16,7 @@
       <view class="box">能见度</view>
     </view>
     <view class="bar">
-      <view class="box">{{now.humidity}}</view>
+      <view class="box">{{now.humidity}}%</view>
       <view class="box">{{now.pressure}} hpa</view>
       <view class="box">{{now.vis}} km</view>
     </view>

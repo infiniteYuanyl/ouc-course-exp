@@ -19,7 +19,7 @@ Page({
       })
       this.getWeather();
     },
-    async getLocationIdByName(name){
+    /*async getLocationIdByName(name){
         const {data:res} = await wx.request({
           url: 'https://geoapi.qweather.com/v2/city/lookup',
           data:{
@@ -31,16 +31,16 @@ Page({
           }
         })
         //console.log(res)
-        //return res.message.location
-
-    },
+        //return res.message.locatio
+    },*/
     getWeather:function(){
       var that = this
       wx.request({
         url:'https://devapi.qweather.com/v7/weather/now',
         data:{
           location:getLocationID(this.data.region[1]),
-          key:'your key'
+          //location:getLocationIdByName(this.data.region[1]),
+          key:'58ed51beead64960a16c0e5142b7ce13',
         },
         success:function(res){
           console.log(res.data);
@@ -49,7 +49,6 @@ Page({
           })
         }
       })
-      
   },
   onLoad:function(options){
     this.getWeather();
